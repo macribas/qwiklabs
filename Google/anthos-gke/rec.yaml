@@ -5,7 +5,3 @@ metadata:
 spec:
   # Add fields here
   nodes: 1
-  persistentSpec:
-    enabled: true
-    storageClassName: "standard"
-    volumeSize: 20Gi
