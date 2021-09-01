@@ -3,5 +3,5 @@ kind: RedisEnterpriseCluster
 metadata:
   name: "redis-enterprise"
 spec:
-  nodes: 1
+  nodes: 3
   podAntiAffinity: {}
