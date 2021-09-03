@@ -9,3 +9,10 @@ spec:
     storageClassName: "standard"
     volumeSize: 20Gi
   podAntiAffinity: {}
+  redisEnterpriseNodeResources:
+    limits:
+      cpu: "1"
+      memory: 2Gi
+    requests:
+      cpu: "1"
+      memory: 2Gi
