@@ -3,16 +3,15 @@ kind: RedisEnterpriseCluster
 metadata:
   name: "redis-enterprise"
 spec:
-  nodes: 3
+  nodes: 1
   persistentSpec:
     enabled: true
     storageClassName: "standard"
     volumeSize: 20Gi
-  podAntiAffinity: {}
   redisEnterpriseNodeResources:
     limits:
       cpu: "1"
-      memory: 2Gi
+      memory: 4Gi
     requests:
       cpu: "1"
-      memory: 2Gi
+      memory: 4Gi
