@@ -92,9 +92,6 @@ spec:
   versions:
   - name: v1
     served: true
-    storage: true
-  - name: v1
-    served: true
     storage: false
     additionalPrinterColumns:
     - JSONPath: .spec.nodes
