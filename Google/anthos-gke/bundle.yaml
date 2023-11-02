@@ -77,7 +77,26 @@ kind: CustomResourceDefinition
 metadata:
   name: redisenterpriseclusters.app.redislabs.com
 spec:
-  additionalPrinterColumns:
+  group: app.redislabs.com
+  names:
+    kind: RedisEnterpriseCluster
+    listKind: RedisEnterpriseClusterList
+    plural: redisenterpriseclusters
+    singular: redisenterprisecluster
+    shortNames:
+      - rec
+  scope: Namespaced
+  subresources:
+    status: {}
+  version: v1
+  versions:
+  - name: v1
+    served: true
+    storage: true
+  - name: v1
+    served: true
+    storage: false
+    additionalPrinterColumns:
     - JSONPath: .spec.nodes
       name: Nodes
       type: string
@@ -102,25 +121,6 @@ spec:
     - name: Age
       type: date
       JSONPath: .metadata.creationTimestamp
-  group: app.redislabs.com
-  names:
-    kind: RedisEnterpriseCluster
-    listKind: RedisEnterpriseClusterList
-    plural: redisenterpriseclusters
-    singular: redisenterprisecluster
-    shortNames:
-      - rec
-  scope: Namespaced
-  subresources:
-    status: {}
-  version: v1
-  versions:
-  - name: v1
-    served: true
-    storage: true
-  - name: v1
-    served: true
-    storage: false
   validation:
     openAPIV3Schema:
       description: RedisEnterpriseCluster is the Schema for the redisenterpriseclusters
