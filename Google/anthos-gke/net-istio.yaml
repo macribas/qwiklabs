@@ -120,7 +120,7 @@ spec:
 ---
 # Allows the Webhooks to be reached by kube-api with or without
 # sidecar injection and with mTLS PERMISSIVE and STRICT.
-apiVersion: "security.istio.io/v1beta1"
+apiVersion: "security.istio.io/v1"
 kind: "PeerAuthentication"
 metadata:
   name: "webhook"
@@ -136,7 +136,7 @@ spec:
     8443:
       mode: PERMISSIVE
 ---
-apiVersion: "security.istio.io/v1beta1"
+apiVersion: "security.istio.io/v1"
 kind: "PeerAuthentication"
 metadata:
   name: "domainmapping-webhook"
@@ -152,7 +152,7 @@ spec:
     8443:
       mode: PERMISSIVE
 ---
-apiVersion: "security.istio.io/v1beta1"
+apiVersion: "security.istio.io/v1"
 kind: "PeerAuthentication"
 metadata:
   name: "istio-webhook"
@@ -192,7 +192,7 @@ metadata:
     networking.knative.dev/ingress-provider: istio
 webhooks:
   - admissionReviewVersions:
-      - v1beta1
+      - v1
     clientConfig:
       service:
         name: istio-webhook
@@ -228,7 +228,7 @@ metadata:
     networking.knative.dev/ingress-provider: istio
 webhooks:
   - admissionReviewVersions:
-      - v1beta1
+      - v1
     clientConfig:
       service:
         name: istio-webhook
