@@ -94,30 +94,30 @@ spec:
     subresources:
       status: {}
     additionalPrinterColumns:
-      - JSONPath: .spec.nodes
+      - jsonPath: .spec.nodes
         name: Nodes
         type: string
-      - JSONPath: .spec.redisEnterpriseImageSpec.versionTag
+      - jsonPath: .spec.redisEnterpriseImageSpec.versionTag
         name: Version
         type: string
-      - JSONPath: .status.state
+      - jsonPath: .status.state
         name: State
         type: string
-      - JSONPath: .status.specStatus
+      - jsonPath: .status.specStatus
         name: Spec Status
         type: string
-      - JSONPath: .status.licenseStatus.licenseState
+      - jsonPath: .status.licenseStatus.licenseState
         name: License State
         type: string
-      - JSONPath: .status.licenseStatus.shardsLimit
+      - jsonPath: .status.licenseStatus.shardsLimit
         name: Shards Limit
         type: string
-      - JSONPath: .status.licenseStatus.expirationDate
+      - jsonPath: .status.licenseStatus.expirationDate
         name: License Expiration Date
         type: string
       - name: Age
         type: date
-        JSONPath: .metadata.creationTimestamp
+        jsonPath: .metadata.creationTimestamp
     schema:
       openAPIV3Schema:
         description: RedisEnterpriseCluster is the Schema for the redisenterpriseclusters
