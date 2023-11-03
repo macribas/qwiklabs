@@ -2342,7 +2342,7 @@ spec:
       serviceAccountName: redis-enterprise-operator
       containers:
         - name: redis-enterprise-operator
-          image: redislabs/operator:6.0.12-5
+          image: redislabs/operator:7.2.4-7
           command:
           - redis-enterprise-operator
           imagePullPolicy: Always
