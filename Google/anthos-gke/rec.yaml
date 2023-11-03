@@ -4,6 +4,7 @@ metadata:
   name: "redis-enterprise"
 spec:
   nodes: 1
+  scope: Namespaced
   persistentSpec:
     enabled: true
     storageClassName: "standard"
