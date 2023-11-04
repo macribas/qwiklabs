@@ -88,9 +88,15 @@ spec:
   scope: Namespaced
   preserveUnknownFields: false
   versions:
+  - name: v1beta1
+    # Each version can be enabled/disabled by Served flag.
+    served: true
+    # One and only one version must be marked as the storage version.
+    storage: true
+    # A schema is required
   - name: v1
     served: true
-    storage: true
+    storage: false
     subresources:
       status: {}
     additionalPrinterColumns:
@@ -1793,7 +1799,7 @@ spec:
   versions:
   - name: v1
     served: true
-    storage: true
+    storage: false
     subresources:
       status: {}
     schema:
