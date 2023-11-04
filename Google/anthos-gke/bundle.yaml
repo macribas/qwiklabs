@@ -89,9 +89,9 @@ spec:
   preserveUnknownFields: false
   versions:
  versions:
-  - name: v2
+  - name: v1
     served: true
-    storage: false
+    storage: true
     subresources:
       status: {}
     additionalPrinterColumns:
