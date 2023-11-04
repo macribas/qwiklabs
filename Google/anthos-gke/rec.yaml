@@ -16,3 +16,7 @@ spec:
     requests:
       cpu: "1"
       memory: 4Gi
+  redisEnterpriseImageSpec:
+    imagePullPolicy: IfNotPresent
+    repository: redislabs/redis
+    versionTag: 7.2.4-72.rhel7-openshift
